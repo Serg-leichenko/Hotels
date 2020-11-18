@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://resources/demos/style.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Hotels</title>
+</head>
+
+<body>
+  <section>
+    <div class="wrap">
+      <div class="hotels">
+        <div class="category">
+          <div class="seacrh-hotels">
+            <div class="search-country">
+              <div class="container__country menuCheckListCountry">
+                <div class="country_list" onclick="btnCountry()">
+                  <a href="#" class="title-name">Поиск по странам и городам</a>
+                  <span class="icon-angle">&#65087;</span>
+                </div>
+                <div class="country__menu" id="countryMenu">
+                  <div class="country__menu_items">
+                    <ul>
+                      <li>
+                        <input type="search" class="search" id="myInput" placeholder="Введите страну, например, Россия" autocomplete="on" onkeyup="myFunction()" />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="all-stars">
+              <div class="container__stars menuCheckListStars">
+                <div class="category_list">
+                  <a href="#" class="title-name">Звезды</a>
+                  <span class="icon-angle">&#65087;</span>
+                </div>
+                <div class="stars__menu">
+                  <div class="stars__menu_items">
+                    <ul>
+                      <li>
+                        <input type="checkbox" id="checkbox-star1" class="check" />
+                        <label for="checkbox-star1">Без звезд</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="checkbox-star2" class="check" />
+                        <label for="checkbox-star2">1 звезда</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="checkbox-star3" class="check" />
+                        <label for="checkbox-star3">2 звезда</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="checkbox-star4" class="check" />
+                        <label for="checkbox-star4">3 звезда</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="checkbox-star5" class="check" />
+                        <label for="checkbox-star5">4 звезда</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="checkbox-star6" class="check" />
+                        <label for="checkbox-star6">5 звезда</label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="type">
+              <div class="container__type menuCheckListType">
+                <div class="type_list" onclick="btnType()">
+                  <a href="#" class="title-name">Тип</a>
+                  <span class="icon-angle">&#65087;</span>
+                </div>
+                <div class="type__menu" id="typeMenu">
+                  <div class="type__menu_items">
+                    <ul>
+                      <li><a href="#" class="type-btn">Отели</a></li>
+                      <li><a href="#" class="type-btn">Апартаменты</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="price">
+              <div class="container__price menuCheckListPrice">
+                <div class="price_list" onclick="btnPrice()">
+                  <a href="#" class="title-name">Цена</a>
+                  <span class="icon-angle">&#65087;</span>
+                </div>
+                <div class="price__menu" id="priceMenu">
+                  <div class="price__menu_items">
+                    <p>
+                      <input type="text" id="amount1" readonly><span>&#8381;</span>
+                      <input type="text" id="amount2" readonly><span>&#8381;</span>                  
+                    </p>                     
+                    <div id="slider-range"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="filter">
+              <a href="#" id="deleteFilter" onclick="uncheck()"><i class="fas fa-redo"></i>Сбросить все фильтры</a>
+            </div>
+          </div>
+        </div>
+        <div class="apartaments">
+          <ul id="myUL">
+            <li><div class="apartaments__room">
+              <div class="image">
+                <img src="./images/back.png" alt="" />
+              </div>
+              <div class="description">
+                <p class="under-title">
+                  Фалираки, Родос, Греция
+                </p>
+                <h3 class="title">
+                  Mondrian Suites Berlin am Checkpoint Charlie Suites Berlin am
+                </h3>
+                <div class="stars">
+                  <input type="checkbox" id="star1" />
+                  <label for="star1">&#9734;</label>
+                  <input type="checkbox" id="star2" />
+                  <label for="star2">&#9734;</label>
+                  <input type="checkbox" id="star3" />
+                  <label for="star3">&#9734;</label>
+                  <input type="checkbox" id="star4" />
+                  <label for="star4">&#9734;</label>
+                  <span class="number"><b>4 звезды</b></span>
+                  <a href="#">Отель</a>
+                </div>
+                <div class="text">
+                  Этот стильный отель находится между стадионом «Мерседес-Бенц
+                  Арена» и Истсайдской галереей — самой известной...
+                </div>
+              </div>
+              <div class="review">
+                <div class="no-star">
+                  <p class="icon">
+                    <i class="fas fa-star icon-star"></i>
+                  </p>
+                  <p class="text">
+                    Нет оценок.
+                  </p>
+                </div>
+                <div class="to-book">
+                  <div class="price"><b>от 32 566</b> &#8381;</div>
+                  <a href="#">Забронировать</a>
+                </div>
+              </div>
+            </div></li>
+            <li><div class="apartaments__room">
+              <div class="image">
+                <img src="./images/back1.png" alt="" />
+              </div>
+              <div class="description">
+                <p class="under-title">
+                  Фалираки, Родос, Греция
+                </p>
+                <h3 class="title">
+                  Cotton House Hotel, Autograph Collection
+                </h3>
+                <div class="stars1">
+                  <input type="checkbox" id="star5" />
+                  <label for="star5">&#9734;</label>
+                  <input type="checkbox" id="star6" />
+                  <label for="star6">&#9734;</label>
+                  <input type="checkbox" id="star7" />
+                  <label for="star7">&#9734;</label>
+                  <input type="checkbox" id="star8" />
+                  <label for="star8">&#9734;</label>
+                  <span class="number"><b>4 звезды</b></span>
+                  <a href="#">Отель</a>
+                </div>
+                <div class="text">
+                  Этот стильный отель находится между стадионом «Мерседес-Бенц
+                  Арена» и Истсайдской галереей — самой известной...
+                </div>
+              </div>
+              <div class="review">
+                <div class="yes-star">
+                  <p class="yes-star_icon">
+                    <i class="fas fa-star yes-icon-star"></i>
+                    <span><b>4.5</b></span> <span class="good"><b>Хорошо</b></span>
+                    <span><b>18 отзывов</b></span>
+                  </p>
+                  <p class="yes-star_text">
+                    “Отличное расположение Полностью новый: только что открылся в
+                    септе, поэтому все идеально: комната довольно большая и хорошо
+                    оформленная Удивительная терраса и невероятное патио
+                    <b>с бассейном</b>. Хороший зал с баром ... ”
+                  </p>
+                </div>
+                <div class="to-book to-book-btn">
+                  <div class="price"><b>от 32 566</b> &#8381;</div>
+                  <a href="#">Забронировать</a>
+                </div>
+              </div>
+            </div></li>
+            <li><div class="apartaments__room">
+              <div class="image">
+                <img src="./images/back2.png" alt="" />
+              </div>
+              <div class="description">
+                <p class="under-title">
+                  Фалираки, Родос, Греция
+                </p>
+                <h3 class="title">
+                  Cotton House Hotel, Autograph Collection
+                </h3>
+                <div class="stars2">
+                  <input type="checkbox" id="star9" />
+                  <label for="star9">&#9734;</label>
+                  <input type="checkbox" id="star10" />
+                  <label for="star10">&#9734;</label>
+                  <input type="checkbox" id="star11" />
+                  <label for="star11">&#9734;</label>
+                  <input type="checkbox" id="star12" />
+                  <label for="star12">&#9734;</label>
+                  <span class="number"><b>4 звезды</b></span>
+                  <a href="#">Отель</a>
+                </div>
+                <div class="text">
+                  Этот стильный отель находится между стадионом «Мерседес-Бенц
+                  Арена» и Истсайдской галереей — самой известной...
+                </div>
+              </div>
+              <div class="review">
+                <div class="yes-star">
+                  <p class="yes-star_icon">
+                    <i class="fas fa-star yes-icon-star"></i>
+                    <span><b>4.5</b></span> <span class="good"><b>Хорошо</b></span>
+                    <span><b>18 отзывов</b></span>
+                  </p>
+                  <p class="yes-star_text">
+                    “Отличное расположение Полностью новый: только что открылся в
+                    септе, поэтому все идеально: комната довольно большая и хорошо
+                    оформленная Удивительная терраса и невероятное патио
+                    <b>с бассейном</b>. Хороший зал с баром ... ”
+                  </p>
+                </div>
+                <div class="to-book to-book-btn">
+                  <div class="price"><b>от 32 566</b> &#8381;</div>
+                  <a href="#">Забронировать</a>
+                </div>
+              </div>
+            </div></li>
+            <li><div class="apartaments__room">
+              <div class="image">
+                <img src="./images/back.png" alt="" />
+              </div>
+              <div class="description">
+                <p class="under-title">
+                  Фалираки, Родос, Греция
+                </p>
+                <h3 class="title">
+                  Mondrian Suites Berlin am Checkpoint Charlie Suites Berlin am
+                </h3>
+                <div class="stars3">
+                  <input type="checkbox" id="star13" />
+                  <label for="star13">&#9734;</label>
+                  <input type="checkbox" id="star14" />
+                  <label for="star14">&#9734;</label>
+                  <input type="checkbox" id="star15" />
+                  <label for="star15">&#9734;</label>
+                  <input type="checkbox" id="star16" />
+                  <label for="star16">&#9734;</label>
+                  <span class="number"><b>4 звезды</b></span>
+                  <a href="#">Отель</a>
+                </div>
+                <div class="text">
+                  Этот стильный отель находится между стадионом «Мерседес-Бенц
+                  Арена» и Истсайдской галереей — самой известной...
+                </div>
+              </div>
+              <div class="review">
+                <div class="no-star">
+                  <p class="icon">
+                    <i class="fas fa-star icon-star"></i>
+                  </p>
+                  <p class="text">
+                    Нет оценок.
+                  </p>
+                </div>
+                <div class="to-book">
+                  <div class="price"><b>от 32 566</b> &#8381;</div>
+                  <a href="#">Забронировать</a>
+                </div>
+              </div>
+            </div></li>
+            <li><div class="apartaments__room">
+              <div class="image">
+                <img src="./images/back1.png" alt="" />
+              </div>
+              <div class="description">
+                <p class="under-title">
+                  Фалираки, Родос, Греция
+                </p>
+                <h3 class="title">
+                  Cotton House Hotel, Autograph Collection
+                </h3>
+                <div class="stars4">
+                  <input type="checkbox" id="star17" />
+                  <label for="star17">&#9734;</label>
+                  <input type="checkbox" id="star18" />
+                  <label for="star18">&#9734;</label>
+                  <input type="checkbox" id="star19" />
+                  <label for="star19">&#9734;</label>
+                  <input type="checkbox" id="star20" />
+                  <label for="star20">&#9734;</label>
+                  <span class="number"><b>4 звезды</b></span>
+                  <a href="#">Отель</a>
+                </div>
+                <div class="text">
+                  Этот стильный отель находится между стадионом «Мерседес-Бенц
+                  Арена» и Истсайдской галереей — самой известной...
+                </div>
+              </div>
+              <div class="review">
+                <div class="yes-star">
+                  <p class="yes-star_icon">
+                    <i class="fas fa-star yes-icon-star"></i>
+                    <span><b>4.5</b></span> <span class="good"><b>Хорошо</b></span>
+                    <span><b>18 отзывов</b></span>
+                  </p>
+                  <p class="yes-star_text">
+                    “Отличное расположение Полностью новый: только что открылся в
+                    септе, поэтому все идеально: комната довольно большая и хорошо
+                    оформленная Удивительная терраса и невероятное патио
+                    <b>с бассейном</b>. Хороший зал с баром ... ”
+                  </p>
+                </div>
+                <div class="to-book to-book-btn">
+                  <div class="price"><b>от 32 566</b> &#8381;</div>
+                  <a to="#">Забронировать</a>
+                </div>
+              </div>
+            </div></li>
+            <li><div class="apartaments__room">
+              <div class="image">
+                <img src="./images/back3.png" alt="" />
+              </div>
+              <div class="description">
+                <p class="under-title">
+                  Фалираки, Родос, Греция
+                </p>
+                <h3 class="title">
+                  Cotton House Hotel, Autograph Collection
+                </h3>
+                <div class="stars5">
+                  <input type="checkbox" id="star21" />
+                  <label for="star21">&#9734;</label>
+                  <input type="checkbox" id="star22" />
+                  <label for="star22">&#9734;</label>
+                  <input type="checkbox" id="star23" />
+                  <label for="star23">&#9734;</label>
+                  <input type="checkbox" id="star24" />
+                  <label for="star24">&#9734;</label>
+                  <span class="number"><b>4 звезды</b></span>
+                  <a href="#">Отель</a>
+                </div>
+                <div class="text">
+                  Этот стильный отель находится между стадионом «Мерседес-Бенц
+                  Арена» и Истсайдской галереей — самой известной...
+                </div>
+              </div>
+              <div class="review">
+                <div class="yes-star">
+                  <p class="yes-star_icon">
+                    <i class="fas fa-star yes-icon-star"></i>
+                    <span><b>4.5</b></span> <span class="good"><b>Хорошо</b></span>
+                    <span><b>18 отзывов</b></span>
+                  </p>
+                  <p class="yes-star_text">
+                    “Отличное расположение Полностью новый: только что открылся в
+                    септе, поэтому все идеально: комната довольно большая и хорошо
+                    оформленная Удивительная терраса и невероятное патио
+                    <b>с бассейном</b>. Хороший зал с баром ... ”
+                  </p>
+                </div>
+                <div class="to-book to-book-btn">
+                  <div class="price"><b>от 32 566</b> &#8381;</div>
+                  <a href="#">Забронировать</a>
+                </div>
+              </div>
+            </div></li>
+          </ul>
+          <div class="all-hotels">
+            <a href="#">Показать еще отели</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

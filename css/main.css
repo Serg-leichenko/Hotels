@@ -1,0 +1,536 @@
+@font-face {
+  font-family: "KievitPro";
+  src: local("KievitPro-Regular"), local("KievitPro-Regular"), url("../fonts/KievitPro-Regular.ttf") format("ttf"), url("../fonts/KievitPro-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: "rouble";
+  src: local("rouble"), local("rouble"), url("../fonts/rouble.otf") format("otf");
+  font-weight: 400;
+  font-style: normal; }
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+.wrap {
+  padding: 56px 15px 0 15px; }
+
+h3 {
+  font-size: 21px;
+  line-height: 24px;
+  font-feature-settings: "pnum" on, "onum" on;
+  color: #000000;
+  margin: 6px 0 16px 0; }
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  display: block; }
+
+.hotels {
+  font-family: "KievitPro", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  display: flex;
+  justify-content: space-between; }
+  .hotels .seacrh-hotels {
+    font-family: "KievitPro", sans-serif;
+    font-style: normal;
+    font-weight: normal; }
+    .hotels .seacrh-hotels .all-stars,
+    .hotels .seacrh-hotels .search-country,
+    .hotels .seacrh-hotels .type,
+    .hotels .seacrh-hotels .price {
+      width: 300px;
+      background: #ffffff;
+      box-sizing: border-box;
+      border-radius: 2px;
+      margin-bottom: 20px; }
+      .hotels .seacrh-hotels .all-stars .menuCheckListStars.active .stars__menu,
+      .hotels .seacrh-hotels .search-country .menuCheckListStars.active .stars__menu,
+      .hotels .seacrh-hotels .type .menuCheckListStars.active .stars__menu,
+      .hotels .seacrh-hotels .price .menuCheckListStars.active .stars__menu {
+        display: block; }
+      .hotels .seacrh-hotels .all-stars .category_list,
+      .hotels .seacrh-hotels .all-stars .country_list,
+      .hotels .seacrh-hotels .all-stars .type_list,
+      .hotels .seacrh-hotels .all-stars .price_list,
+      .hotels .seacrh-hotels .search-country .category_list,
+      .hotels .seacrh-hotels .search-country .country_list,
+      .hotels .seacrh-hotels .search-country .type_list,
+      .hotels .seacrh-hotels .search-country .price_list,
+      .hotels .seacrh-hotels .type .category_list,
+      .hotels .seacrh-hotels .type .country_list,
+      .hotels .seacrh-hotels .type .type_list,
+      .hotels .seacrh-hotels .type .price_list,
+      .hotels .seacrh-hotels .price .category_list,
+      .hotels .seacrh-hotels .price .country_list,
+      .hotels .seacrh-hotels .price .type_list,
+      .hotels .seacrh-hotels .price .price_list {
+        padding: 24px 31px 24px 21px;
+        border: 1px solid #F3EFEA;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer; }
+        .hotels .seacrh-hotels .all-stars .category_list .title-name,
+        .hotels .seacrh-hotels .all-stars .country_list .title-name,
+        .hotels .seacrh-hotels .all-stars .type_list .title-name,
+        .hotels .seacrh-hotels .all-stars .price_list .title-name,
+        .hotels .seacrh-hotels .search-country .category_list .title-name,
+        .hotels .seacrh-hotels .search-country .country_list .title-name,
+        .hotels .seacrh-hotels .search-country .type_list .title-name,
+        .hotels .seacrh-hotels .search-country .price_list .title-name,
+        .hotels .seacrh-hotels .type .category_list .title-name,
+        .hotels .seacrh-hotels .type .country_list .title-name,
+        .hotels .seacrh-hotels .type .type_list .title-name,
+        .hotels .seacrh-hotels .type .price_list .title-name,
+        .hotels .seacrh-hotels .price .category_list .title-name,
+        .hotels .seacrh-hotels .price .country_list .title-name,
+        .hotels .seacrh-hotels .price .type_list .title-name,
+        .hotels .seacrh-hotels .price .price_list .title-name {
+          font-size: 15px;
+          color: #000000; }
+        .hotels .seacrh-hotels .all-stars .category_list .icon-angle,
+        .hotels .seacrh-hotels .all-stars .country_list .icon-angle,
+        .hotels .seacrh-hotels .all-stars .type_list .icon-angle,
+        .hotels .seacrh-hotels .all-stars .price_list .icon-angle,
+        .hotels .seacrh-hotels .search-country .category_list .icon-angle,
+        .hotels .seacrh-hotels .search-country .country_list .icon-angle,
+        .hotels .seacrh-hotels .search-country .type_list .icon-angle,
+        .hotels .seacrh-hotels .search-country .price_list .icon-angle,
+        .hotels .seacrh-hotels .type .category_list .icon-angle,
+        .hotels .seacrh-hotels .type .country_list .icon-angle,
+        .hotels .seacrh-hotels .type .type_list .icon-angle,
+        .hotels .seacrh-hotels .type .price_list .icon-angle,
+        .hotels .seacrh-hotels .price .category_list .icon-angle,
+        .hotels .seacrh-hotels .price .country_list .icon-angle,
+        .hotels .seacrh-hotels .price .type_list .icon-angle,
+        .hotels .seacrh-hotels .price .price_list .icon-angle {
+          color: #000000;
+          font-size: 10px; }
+      .hotels .seacrh-hotels .all-stars .stars__menu,
+      .hotels .seacrh-hotels .all-stars .country__menu,
+      .hotels .seacrh-hotels .all-stars .price__menu,
+      .hotels .seacrh-hotels .search-country .stars__menu,
+      .hotels .seacrh-hotels .search-country .country__menu,
+      .hotels .seacrh-hotels .search-country .price__menu,
+      .hotels .seacrh-hotels .type .stars__menu,
+      .hotels .seacrh-hotels .type .country__menu,
+      .hotels .seacrh-hotels .type .price__menu,
+      .hotels .seacrh-hotels .price .stars__menu,
+      .hotels .seacrh-hotels .price .country__menu,
+      .hotels .seacrh-hotels .price .price__menu {
+        display: none;
+        height: 250px;
+        padding-left: 21px;
+        border: 1px solid #F3EFEA;
+        padding-top: 30px;
+        box-shadow: 0px 10px 30px rgba(31, 21, 1, 0.1); }
+        .hotels .seacrh-hotels .all-stars .stars__menu_items ul li,
+        .hotels .seacrh-hotels .all-stars .country__menu_items ul li,
+        .hotels .seacrh-hotels .all-stars .price__menu_items ul li,
+        .hotels .seacrh-hotels .search-country .stars__menu_items ul li,
+        .hotels .seacrh-hotels .search-country .country__menu_items ul li,
+        .hotels .seacrh-hotels .search-country .price__menu_items ul li,
+        .hotels .seacrh-hotels .type .stars__menu_items ul li,
+        .hotels .seacrh-hotels .type .country__menu_items ul li,
+        .hotels .seacrh-hotels .type .price__menu_items ul li,
+        .hotels .seacrh-hotels .price .stars__menu_items ul li,
+        .hotels .seacrh-hotels .price .country__menu_items ul li,
+        .hotels .seacrh-hotels .price .price__menu_items ul li {
+          margin-bottom: 13px;
+          cursor: pointer;
+          display: flex;
+          align-items: baseline; }
+          .hotels .seacrh-hotels .all-stars .stars__menu_items ul li label,
+          .hotels .seacrh-hotels .all-stars .stars__menu_items ul li a,
+          .hotels .seacrh-hotels .all-stars .country__menu_items ul li label,
+          .hotels .seacrh-hotels .all-stars .country__menu_items ul li a,
+          .hotels .seacrh-hotels .all-stars .price__menu_items ul li label,
+          .hotels .seacrh-hotels .all-stars .price__menu_items ul li a,
+          .hotels .seacrh-hotels .search-country .stars__menu_items ul li label,
+          .hotels .seacrh-hotels .search-country .stars__menu_items ul li a,
+          .hotels .seacrh-hotels .search-country .country__menu_items ul li label,
+          .hotels .seacrh-hotels .search-country .country__menu_items ul li a,
+          .hotels .seacrh-hotels .search-country .price__menu_items ul li label,
+          .hotels .seacrh-hotels .search-country .price__menu_items ul li a,
+          .hotels .seacrh-hotels .type .stars__menu_items ul li label,
+          .hotels .seacrh-hotels .type .stars__menu_items ul li a,
+          .hotels .seacrh-hotels .type .country__menu_items ul li label,
+          .hotels .seacrh-hotels .type .country__menu_items ul li a,
+          .hotels .seacrh-hotels .type .price__menu_items ul li label,
+          .hotels .seacrh-hotels .type .price__menu_items ul li a,
+          .hotels .seacrh-hotels .price .stars__menu_items ul li label,
+          .hotels .seacrh-hotels .price .stars__menu_items ul li a,
+          .hotels .seacrh-hotels .price .country__menu_items ul li label,
+          .hotels .seacrh-hotels .price .country__menu_items ul li a,
+          .hotels .seacrh-hotels .price .price__menu_items ul li label,
+          .hotels .seacrh-hotels .price .price__menu_items ul li a {
+            font-size: 15px;
+            color: #000000;
+            mix-blend-mode: normal;
+            margin-left: 7px; }
+          .hotels .seacrh-hotels .all-stars .stars__menu_items ul li .search,
+          .hotels .seacrh-hotels .all-stars .country__menu_items ul li .search,
+          .hotels .seacrh-hotels .all-stars .price__menu_items ul li .search,
+          .hotels .seacrh-hotels .search-country .stars__menu_items ul li .search,
+          .hotels .seacrh-hotels .search-country .country__menu_items ul li .search,
+          .hotels .seacrh-hotels .search-country .price__menu_items ul li .search,
+          .hotels .seacrh-hotels .type .stars__menu_items ul li .search,
+          .hotels .seacrh-hotels .type .country__menu_items ul li .search,
+          .hotels .seacrh-hotels .type .price__menu_items ul li .search,
+          .hotels .seacrh-hotels .price .stars__menu_items ul li .search,
+          .hotels .seacrh-hotels .price .country__menu_items ul li .search,
+          .hotels .seacrh-hotels .price .price__menu_items ul li .search {
+            width: 90%;
+            height: 40px;
+            border-radius: 2px;
+            margin: 10px 0px;
+            padding-left: 15px; }
+            .hotels .seacrh-hotels .all-stars .stars__menu_items ul li .search ::placeholder,
+            .hotels .seacrh-hotels .all-stars .country__menu_items ul li .search ::placeholder,
+            .hotels .seacrh-hotels .all-stars .price__menu_items ul li .search ::placeholder,
+            .hotels .seacrh-hotels .search-country .stars__menu_items ul li .search ::placeholder,
+            .hotels .seacrh-hotels .search-country .country__menu_items ul li .search ::placeholder,
+            .hotels .seacrh-hotels .search-country .price__menu_items ul li .search ::placeholder,
+            .hotels .seacrh-hotels .type .stars__menu_items ul li .search ::placeholder,
+            .hotels .seacrh-hotels .type .country__menu_items ul li .search ::placeholder,
+            .hotels .seacrh-hotels .type .price__menu_items ul li .search ::placeholder,
+            .hotels .seacrh-hotels .price .stars__menu_items ul li .search ::placeholder,
+            .hotels .seacrh-hotels .price .country__menu_items ul li .search ::placeholder,
+            .hotels .seacrh-hotels .price .price__menu_items ul li .search ::placeholder {
+              font-size: 15px;
+              color: #837f78; }
+        .hotels .seacrh-hotels .all-stars .stars__menu_items p,
+        .hotels .seacrh-hotels .all-stars .country__menu_items p,
+        .hotels .seacrh-hotels .all-stars .price__menu_items p,
+        .hotels .seacrh-hotels .search-country .stars__menu_items p,
+        .hotels .seacrh-hotels .search-country .country__menu_items p,
+        .hotels .seacrh-hotels .search-country .price__menu_items p,
+        .hotels .seacrh-hotels .type .stars__menu_items p,
+        .hotels .seacrh-hotels .type .country__menu_items p,
+        .hotels .seacrh-hotels .type .price__menu_items p,
+        .hotels .seacrh-hotels .price .stars__menu_items p,
+        .hotels .seacrh-hotels .price .country__menu_items p,
+        .hotels .seacrh-hotels .price .price__menu_items p {
+          display: flex;
+          justify-content: space-between; }
+          .hotels .seacrh-hotels .all-stars .stars__menu_items p span,
+          .hotels .seacrh-hotels .all-stars .country__menu_items p span,
+          .hotels .seacrh-hotels .all-stars .price__menu_items p span,
+          .hotels .seacrh-hotels .search-country .stars__menu_items p span,
+          .hotels .seacrh-hotels .search-country .country__menu_items p span,
+          .hotels .seacrh-hotels .search-country .price__menu_items p span,
+          .hotels .seacrh-hotels .type .stars__menu_items p span,
+          .hotels .seacrh-hotels .type .country__menu_items p span,
+          .hotels .seacrh-hotels .type .price__menu_items p span,
+          .hotels .seacrh-hotels .price .stars__menu_items p span,
+          .hotels .seacrh-hotels .price .country__menu_items p span,
+          .hotels .seacrh-hotels .price .price__menu_items p span {
+            position: absolute;
+            left: 92px;
+            color: #ffffff; }
+      .hotels .seacrh-hotels .all-stars .stars__menu_items ul li input,
+      .hotels .seacrh-hotels .search-country .stars__menu_items ul li input,
+      .hotels .seacrh-hotels .type .stars__menu_items ul li input,
+      .hotels .seacrh-hotels .price .stars__menu_items ul li input {
+        display: none; }
+        .hotels .seacrh-hotels .all-stars .stars__menu_items ul li input:checked + label::after,
+        .hotels .seacrh-hotels .search-country .stars__menu_items ul li input:checked + label::after,
+        .hotels .seacrh-hotels .type .stars__menu_items ul li input:checked + label::after,
+        .hotels .seacrh-hotels .price .stars__menu_items ul li input:checked + label::after {
+          display: block;
+          content: "\2714";
+          position: absolute;
+          left: -25px;
+          top: 0;
+          color: #ffffff; }
+      .hotels .seacrh-hotels .all-stars .stars__menu_items ul li label,
+      .hotels .seacrh-hotels .search-country .stars__menu_items ul li label,
+      .hotels .seacrh-hotels .type .stars__menu_items ul li label,
+      .hotels .seacrh-hotels .price .stars__menu_items ul li label {
+        position: relative;
+        cursor: pointer;
+        margin-left: 40px; }
+        .hotels .seacrh-hotels .all-stars .stars__menu_items ul li label::before,
+        .hotels .seacrh-hotels .search-country .stars__menu_items ul li label::before,
+        .hotels .seacrh-hotels .type .stars__menu_items ul li label::before,
+        .hotels .seacrh-hotels .price .stars__menu_items ul li label::before {
+          display: block;
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background: #ff4641;
+          border-radius: 2px;
+          left: -30px; }
+    .hotels .seacrh-hotels .filter {
+      text-align: center; }
+      .hotels .seacrh-hotels .filter a {
+        font-size: 15px;
+        font-feature-settings: "pnum" on, "lnum" on;
+        color: #0E0E0E;
+        mix-blend-mode: normal; }
+        .hotels .seacrh-hotels .filter a .fa-redo {
+          margin-right: 7px;
+          transform: rotate(-90deg); }
+    .hotels .seacrh-hotels .search-country .country__menu {
+      height: 100px; }
+    .hotels .seacrh-hotels .type__menu {
+      display: none; }
+      .hotels .seacrh-hotels .type__menu .type__menu_items {
+        height: 100px;
+        border: 1px solid #F3EFEA;
+        padding: 21px 21px;
+        box-shadow: 0px 10px 30px rgba(31, 21, 1, 0.1); }
+        .hotels .seacrh-hotels .type__menu .type__menu_items ul {
+          display: flex; }
+          .hotels .seacrh-hotels .type__menu .type__menu_items ul li:first-child {
+            margin-right: 10px; }
+          .hotels .seacrh-hotels .type__menu .type__menu_items ul li a {
+            width: 119px;
+            height: 40px;
+            background: #F9F7F2;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            color: #000000;
+            mix-blend-mode: normal; }
+            .hotels .seacrh-hotels .type__menu .type__menu_items ul li a:hover {
+              background: #FDE283; }
+  .hotels .apartaments {
+    width: 930px;
+    padding-bottom: 85px; }
+    .hotels .apartaments__room {
+      display: flex;
+      border-bottom: 1px solid #F3EFEA;
+      padding-bottom: 28px;
+      margin-bottom: 29px; }
+      .hotels .apartaments__room .description {
+        margin-left: 23px; }
+        .hotels .apartaments__room .description .under-title {
+          font-size: 13px;
+          font-feature-settings: "pnum" on, "lnum" on;
+          color: #515151; }
+        .hotels .apartaments__room .description .stars,
+        .hotels .apartaments__room .description .stars1,
+        .hotels .apartaments__room .description .stars2,
+        .hotels .apartaments__room .description .stars3,
+        .hotels .apartaments__room .description .stars4,
+        .hotels .apartaments__room .description .stars5 {
+          display: flex;
+          align-items: baseline; }
+          .hotels .apartaments__room .description .stars input,
+          .hotels .apartaments__room .description .stars1 input,
+          .hotels .apartaments__room .description .stars2 input,
+          .hotels .apartaments__room .description .stars3 input,
+          .hotels .apartaments__room .description .stars4 input,
+          .hotels .apartaments__room .description .stars5 input {
+            display: none; }
+            .hotels .apartaments__room .description .stars input:checked + label::after,
+            .hotels .apartaments__room .description .stars1 input:checked + label::after,
+            .hotels .apartaments__room .description .stars2 input:checked + label::after,
+            .hotels .apartaments__room .description .stars3 input:checked + label::after,
+            .hotels .apartaments__room .description .stars4 input:checked + label::after,
+            .hotels .apartaments__room .description .stars5 input:checked + label::after {
+              content: "" url("../../images/star.png");
+              display: inline-block;
+              position: absolute;
+              left: 1px;
+              bottom: -1px; }
+          .hotels .apartaments__room .description .stars label,
+          .hotels .apartaments__room .description .stars1 label,
+          .hotels .apartaments__room .description .stars2 label,
+          .hotels .apartaments__room .description .stars3 label,
+          .hotels .apartaments__room .description .stars4 label,
+          .hotels .apartaments__room .description .stars5 label {
+            position: relative;
+            font-size: 15px;
+            cursor: pointer; }
+            .hotels .apartaments__room .description .stars label:hover::after,
+            .hotels .apartaments__room .description .stars1 label:hover::after,
+            .hotels .apartaments__room .description .stars2 label:hover::after,
+            .hotels .apartaments__room .description .stars3 label:hover::after,
+            .hotels .apartaments__room .description .stars4 label:hover::after,
+            .hotels .apartaments__room .description .stars5 label:hover::after {
+              content: "" url("../../images/star.png");
+              display: inline-block;
+              position: absolute;
+              left: 1px;
+              bottom: -1px; }
+          .hotels .apartaments__room .description .stars span,
+          .hotels .apartaments__room .description .stars1 span,
+          .hotels .apartaments__room .description .stars2 span,
+          .hotels .apartaments__room .description .stars3 span,
+          .hotels .apartaments__room .description .stars4 span,
+          .hotels .apartaments__room .description .stars5 span {
+            font-weight: 500;
+            font-size: 13px;
+            font-feature-settings: "pnum" on, "lnum" on;
+            color: #212121;
+            margin: 0 8px; }
+          .hotels .apartaments__room .description .stars a,
+          .hotels .apartaments__room .description .stars1 a,
+          .hotels .apartaments__room .description .stars2 a,
+          .hotels .apartaments__room .description .stars3 a,
+          .hotels .apartaments__room .description .stars4 a,
+          .hotels .apartaments__room .description .stars5 a {
+            width: 50px;
+            height: 20px;
+            border: 1px solid #d4d4d4;
+            box-sizing: border-box;
+            border-radius: 2px;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-feature-settings: "pnum" on, "lnum" on;
+            color: #515151; }
+        .hotels .apartaments__room .description .text {
+          font-size: 14px;
+          line-height: 20px;
+          font-feature-settings: "pnum" on, "lnum" on;
+          color: #000000;
+          margin-top: 16px; }
+      .hotels .apartaments__room .review .no-star {
+        width: 237px;
+        height: 67px;
+        background: #f9f7f2;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .hotels .apartaments__room .review .no-star .icon {
+          position: relative; }
+          .hotels .apartaments__room .review .no-star .icon .icon-star {
+            color: #E0DBD1;
+            margin-right: 8px; }
+          .hotels .apartaments__room .review .no-star .icon::before {
+            display: block;
+            content: "";
+            position: absolute;
+            top: -3px;
+            left: 8px;
+            width: 2px;
+            height: 22px;
+            background-color: #E0DBD1;
+            transform: rotate(45deg); }
+        .hotels .apartaments__room .review .no-star .text {
+          font-size: 14px;
+          font-feature-settings: "pnum" on, "lnum" on;
+          color: #959595; }
+      .hotels .apartaments__room .review .to-book {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 173px; }
+        .hotels .apartaments__room .review .to-book .price {
+          width: 90px;
+          font-family: "rouble", sans-serif;
+          font-size: 17px;
+          font-weight: 500;
+          display: flex;
+          align-items: center;
+          text-align: right;
+          font-feature-settings: "pnum" on, "lnum" on;
+          color: #000000; }
+        .hotels .apartaments__room .review .to-book a {
+          width: 140px;
+          height: 50px;
+          background: #ff4641;
+          border-radius: 2px;
+          font-size: 14px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-feature-settings: "pnum" on, "lnum" on;
+          color: #ffffff;
+          margin-left: 11px; }
+      .hotels .apartaments__room .review .to-book-btn {
+        margin-top: 20px; }
+      .hotels .apartaments__room .yes-star {
+        width: 237px;
+        background: #f9f7f2;
+        padding: 25px 20px; }
+        .hotels .apartaments__room .yes-star_icon {
+          margin-bottom: 18px; }
+          .hotels .apartaments__room .yes-star_icon .yes-icon-star {
+            margin-right: 3px;
+            color: #ff4641; }
+          .hotels .apartaments__room .yes-star_icon span {
+            font-weight: 500;
+            font-size: 14px;
+            font-feature-settings: "pnum" on, "lnum" on;
+            color: #000000; }
+          .hotels .apartaments__room .yes-star_icon .good {
+            margin: 0 12px 0 9px; }
+        .hotels .apartaments__room .yes-star_text {
+          font-size: 13px;
+          line-height: 17px;
+          font-feature-settings: "pnum" on, "lnum" on;
+          color: #515151; }
+    .hotels .apartaments .all-hotels {
+      width: 198px;
+      height: 50px;
+      border: 2px solid #F0EADE;
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto; }
+      .hotels .apartaments .all-hotels a {
+        font-size: 15px;
+        color: #000000; }
+
+.ui-widget.ui-widget-content {
+  width: 258px;
+  height: 3px;
+  background: #DFDACE;
+  border-radius: 2px;
+  border: 0; }
+
+.ui-widget-header {
+  background: #ff4641; }
+
+.ui-state-default,
+.ui-widget-content .ui-state-default {
+  width: 22px;
+  height: 22px;
+  background: #ff4641;
+  border-radius: 50%;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  top: -9px; }
+  .ui-state-default::after,
+  .ui-widget-content .ui-state-default::after {
+    display: block;
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: #ffffff;
+    border-radius: 50%;
+    top: 5px;
+    left: 5px;
+    position: absolute; }
+
+#amount1,
+#amount2 {
+  width: 74px;
+  height: 22px;
+  background: #212121;
+  border-radius: 2px;
+  margin-bottom: 15px;
+  color: #ffffff;
+  border: 0;
+  font-size: 13px;
+  position: relative;
+  padding-left: 15px; }
+
+/*# sourceMappingURL=main.css.map */

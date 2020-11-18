@@ -1,0 +1,67 @@
+//FONTS
+@font-face {
+  font-family: "KievitPro";
+  src: local("KievitPro-Regular"), local("KievitPro-Regular"),
+    url("../fonts/KievitPro-Regular.ttf") format("ttf"),
+    url("../fonts/KievitPro-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "rouble";
+  src: local("rouble"), local("rouble"),
+    url("../fonts/rouble.otf") format("otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+$kievitPro: "KievitPro", sans-serif;
+$rouble: "rouble", sans-serif;
+
+//COLORS
+$bg: #e5e5e5;
+$black: #000000;
+$light-grey: #515151;
+$darck-grey: #212121;
+$border: #d4d4d4;
+$bg-noStar: #f9f7f2;
+$col-noStar: #959595;
+$btn-red: #ff4641;
+$white: #ffffff;
+$bg-star: #E0DBD1;
+$yellow: #FFD037;
+$bord-line: #F3EFEA;
+$all-hotel: #F0EADE;
+$search: #837f78;
+$bg-btn: #F9F7F2;
+$hover-btn: #FDE283;
+$range: #DFDACE;
+$filter: #0E0E0E;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+.wrap {
+  padding: 56px 15px 0 15px;;
+}
+h3 {
+  font-size: 21px;
+  line-height: 24px;
+  font-feature-settings: "pnum" on, "onum" on;
+  color: $black;
+  margin: 6px 0 16px 0;
+}
+ul, li {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+@import "_index";
